@@ -23,17 +23,30 @@ public class PilaLimitadaEstatica implements PilaLimitadaTDA {
     i++;
     } */
 
-    public void Apilar(int x) {
+/*     public void Apilar(int x) {
         if (tamañoTot == i+1) {
-            for (int i = 0; i < tamañoTot; i++) {
-                vector[i] = vector[i + 1];
+            for (int j = 0; j < tamañoTot-1; j++) {
+                vector[j] = vector[j+1];
             }
             vector[i] = x;
         } else {
             vector[i] = x;
             i++;
         }
+    } */
+
+    public void Apilar(int x) {
+        if (i == tamañoTot) {
+            for (int j = 0; j < tamañoTot - 1; j++) {
+                vector[j] = vector[j + 1];
+            }
+            vector[tamañoTot - 1] = x; 
+        } else {
+            vector[i] = x;
+            i++; 
+        }
     }
+    
 
     public void Desapilar() {
         i--;
