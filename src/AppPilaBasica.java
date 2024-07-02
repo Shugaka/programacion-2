@@ -1,7 +1,7 @@
 import api.PilaTDA;
 import impl.PilaEstatica;
 
-public class App {
+public class AppPilaBasica {
     public static void main(String[] args) throws Exception {
         PilaTDA p1 = new PilaEstatica();
 
